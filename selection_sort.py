@@ -3,7 +3,7 @@ Módulo que guarda as funções para o Selection Sort
 """
 
 
-def selection_sort(lista_numeros: list[int]):
+def selection_sort(lista_numeros):
     """
     Selection sort https://pt.wikipedia.org/wiki/Selection_sort
 
@@ -31,7 +31,19 @@ def selection_sort(lista_numeros: list[int]):
     [1, 1, 3]
     """
 
-    # TODO implemente o código fazendo ordenação baseado na ideia do selection sort.
-    # TODO troque a linha abaixo pelo return com a variável que guarda a lista como um todo.
-    # TODO quando terminar de implementar apague esses comentários.
-    return 0
+    lista = lista_numeros
+    count = 0
+    flag = False
+    for i in range(len(lista)):
+        min = i
+        for j in range(i + 1, len(lista)):
+            count += 1
+            if lista[min] > lista[j]:
+                min = j
+
+        aux = lista[i]
+        lista[i] = lista[min]
+        lista[min] = aux
+
+
+    return count

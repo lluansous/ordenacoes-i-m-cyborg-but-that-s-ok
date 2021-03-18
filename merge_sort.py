@@ -3,7 +3,7 @@ Módulo que guarda as funções para o Merge Sort
 """
 
 
-def merge_sort(lista_numeros: list[int]):
+def merge_sort(lista_numeros):
     """
     Merge sort https://pt.wikipedia.org/wiki/Merge_sort
 
@@ -32,7 +32,36 @@ def merge_sort(lista_numeros: list[int]):
     [1, 1, 3]
     """
 
-    # TODO implemente o código fazendo ordenação baseado na ideia do merge sort.
-    # TODO troque a linha abaixo pelo return com a variável que guarda a lista como um todo.
-    # TODO quando terminar de implementar apague esses comentários.
-    return 0
+    lista = lista_numeros
+    if len(lista) > 1:
+        meio = len(lista) // 2
+        esquerda = lista[:meio]
+        direita = lista[meio:]
+        mergesort(esquerda)
+        mergesort(direita)
+
+        i = 0
+        j = 0
+        k = 0
+
+        while i < len(esquerda) and j < len(direita):
+            if esquerda[i] < direita[j]:
+                lista[k] = esquerda[i]
+                i += 1
+            else:
+                lista[k] = direita[j]
+                j += 1
+            k += 1
+
+        while i < len(esquerda):
+            lista[k] = esquerda[i]
+            i += 1
+            k += 1
+
+        while j < len(direita):
+            lista[k] = direita[j]
+            j += 1
+            k += 1
+    lista_numeros=lista
+    
+    return lista_numeros
