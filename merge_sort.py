@@ -37,8 +37,8 @@ def merge_sort(lista_numeros):
         meio = len(lista) // 2
         esquerda = lista[:meio]
         direita = lista[meio:]
-        mergesort(esquerda)
-        mergesort(direita)
+        merge_sort(esquerda)
+        merge_sort(direita)
 
         i = 0
         j = 0

@@ -37,7 +37,6 @@ def selection_sort(lista_numeros):
     for i in range(len(lista)):
         min = i
         for j in range(i + 1, len(lista)):
-            count += 1
             if lista[min] > lista[j]:
                 min = j
 
@@ -46,4 +45,4 @@ def selection_sort(lista_numeros):
         lista[min] = aux
 
 
-    return count
+    return lista

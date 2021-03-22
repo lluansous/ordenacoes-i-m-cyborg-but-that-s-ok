@@ -37,4 +37,4 @@ def bubble_sort(lista_numeros):
             count+=1
             if lista[j] > lista[j+1] :
                 lista[j], lista[j+1] = lista[j+1], lista[j]
-    return count
+    return lista

@@ -12,13 +12,12 @@ def main():
     # A função abaixo abre o arquivo texto numeros.txt em modo leitura e lê as linhas dele separando
     # elas em uma lista de strings.
     with open('números.txt', 'r', encoding='utf8') as arquivo:
-      lista = arquivo.readlines()
+      linhas_do_arquivo = arquivo.readlines()
 
     # Pegue a lista de strings e converta todos os valores dentro dela para inteiros.
     # TODO COLOQUE SEU CÓDIGO AQUI E APAGUE ESSE COMENTÁRIO DEPOIS.
-    linhas_do_arquivo=[]
-    for lis in lista:
-      linhas_do_arquivo.append(int(lis))
+    for lis in linhas_do_arquivo:
+      linhas_do_arquivo.append(int(lis)) 
 
     # O Código abaixo chama cada um dos métodos de ordenação na lista original.
     # Para garantir que a lista original não muda depois de cada uma das chamadas.
