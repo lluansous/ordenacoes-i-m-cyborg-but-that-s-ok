@@ -3,7 +3,7 @@ Módulo que guarda as funções para o Bubble Sort
 """
 
 
-def bubble_sort(lista_numeros: list[int]):
+def bubble_sort(lista_numeros):
     """
     Bubble sort https://pt.wikipedia.org/wiki/Bubble_sort
 
@@ -29,8 +29,12 @@ def bubble_sort(lista_numeros: list[int]):
     >>> bubble_sort([1, 3, 1])
     [1, 1, 3]
     """
-
-    # TODO implemente o código fazendo ordenação baseado na ideia do bubble sort.
-    # TODO troque a linha abaixo pelo return com a variável que guarda a lista como um todo.
-    # TODO quando terminar de implementar apague esses comentários.
-    return 0
+    lista = lista_numeros
+    count = 0
+    n = len(lista)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            count+=1
+            if lista[j] > lista[j+1] :
+                lista[j], lista[j+1] = lista[j+1], lista[j]
+    return lista
